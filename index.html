@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5" id="result">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <!-- MODAL -->
+            <div class="modal" id="user-modal">
+                <div class="modal-content w-25">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="text-center">Add a New Task</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <select name="status" onchange="handleChange(event)" class="form-control">
+                                    <option value="#" hidden></option>
+                                    <option value="open">Open</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="inproge">Inproge</option>
+                                    <option value="complete">Complete</option>
+                                </select>
+                                <input type="text" placeholder="" class="form-control my-2" name="task"
+                                    onkeyup="handleChange(event)">
+
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-success mx-1" id="save" onclick="createTask()">save</button>
+                            <button class="btn btn-danger mx-1" id="close">close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
